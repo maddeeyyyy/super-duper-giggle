@@ -18,6 +18,9 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use('/auth', require('./routes/auth'));
 app.use('/blogs', require('./routes/posts'));
 app.use('/product',  require('./routes/product'));
+app.use('/inventory', require('./routes/inventoryRoutes'));
+app.use('/cart',  require('./routes/cartRoutes'));
+app.use('/checkout',  require('./routes/checkoutRoutes'));
 
 // Connect to database and start server
 const PORT = process.env.PORT || 4000;
